@@ -28,6 +28,15 @@ main #global .container .header h3 {
   font-size: 20px;
 }
 
+main #global .container .date {
+  text-align: end;
+  font-size: 15px;
+}
+
+main #global .container .data {
+  letter-spacing: 1px;
+}
+
 main #global .container .data .box {
   width: 100%;
   padding: 20px;

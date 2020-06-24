@@ -32,7 +32,13 @@ main {
             }
          }
 
+         .date {
+            text-align: end;
+            font-size: 15px;
+         }
+
          .data {
+            letter-spacing: 1px;
 
             .box {
                width: 100%;
