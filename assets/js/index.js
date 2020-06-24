@@ -41,3 +41,4 @@ function globalStats(data) {
    date.innerHTML = `Last Updated: ${convertDate(data.Date)}`
 }
 
+// show countries

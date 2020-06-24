@@ -35,7 +35,8 @@ main {
 
          .date {
             text-align: end;
-            font-size: 15px;
+            font-size: 12px;
+            margin-right: 2px;
          }
 
          .data {
@@ -46,11 +47,17 @@ main {
                padding: 20px;
                border-radius: 4px;
                background-color: #172A45;
-               margin: 12px 0;
+               margin: 7px 0;
+               border: 2px solid #172A45;
+               transition: all .3s ease-in-out;
 
                h4 {
                   margin-bottom: 15px;
                }
+            }
+
+            .box:hover {
+               border: 2px solid #5FF2D0;
             }
          }
       }
@@ -63,9 +70,15 @@ main {
       .container {
 
          .header {
+            border: 2px solid #0A192F;
+            background-color: #0A192F;
+            position: fixed;
+            top: 0;
+            padding: 20px 0;
             text-align: center;
             width: 100%;
             height: 60px;
+            z-index: 2;
 
             h3 {
                font-size: 20px;
@@ -73,17 +86,23 @@ main {
          }
 
          .search {
+            border: 2px solid #0A192F;
+            background-color: #0A192F;
+            padding-top: 60px;
+            position: fixed;
             width: 100%;
             display: flex;
 
             i {
-               padding: 10px 10px;
+               padding: 10px 10px 10px 0;
+               margin-bottom: 20px;
             }
 
             .close {
                display: none;
                position: absolute;
                right: 30px;
+               margin-bottom: 20px;
             }
 
             input {
@@ -94,12 +113,40 @@ main {
                outline: 0;
                color: #CCD6F6;
                font-size: 15px;
+               margin-bottom: 20px;
             }
 
             input::placeholder {
                color: #CCD6F6;
             }
          }
+
+         .countries {
+            padding-top: 120px;
+
+            .container {
+               margin-bottom: 6px;
+               background-color: #172A45;
+               padding: 15px;
+               border-radius: 4px;
+               border: 2px solid #172A45;
+               transition: all .3s ease-in-out;
+
+               .country-name {
+                  font-size: 20px;
+                  margin-bottom: 10px;
+               }
+            }
+
+            .container > div {
+               margin-bottom: 3px;
+            }
+
+            .container:hover {
+               border: 2px solid #5FF2D0;
+            }
+         }
+
       }
    }
 
@@ -131,6 +178,7 @@ nav {
    position: fixed;
    bottom: 0;
    padding-top: 10px;
+   background-color: #0A192F;
 
    .container {
       margin-bottom: 20px;
