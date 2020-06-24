@@ -7,8 +7,8 @@ const global_deaths = document.querySelector('#deaths .value')
 const date = document.querySelector('.date')
 
 
-// global fetch data
-function globalData() {
+// fetch data
+function Data() {
 
    fetch(`https://api.covid19api.com/summary`, {
       "method": "GET",
@@ -30,7 +30,7 @@ function globalData() {
    });
 }
 
-globalData()
+Data()
 
 function globalStats(data) {
    
@@ -41,30 +41,3 @@ function globalStats(data) {
    date.innerHTML = `Last Updated: ${convertDate(data.Date)}`
 }
 
-// comma separator number
-function numberWithCommas(x) {
-   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
-// date converter
-function convertDate(str) {
-   var date = new Date(str),
-     mnth = ("" + (date.getMonth() + 1)).slice(-2),
-     day = ("" + date.getDate()).slice(-2) + ",";
-
-     let months = {
-        1: "January",
-        2: "February",
-        3: "March",
-        4: "April",
-        5: "May",
-        6: "June",
-        7: "July",
-        8: "August",
-        9: "September",
-        10: "October",
-        11: "November",
-        12: "December",
-     }
-   return [months[mnth], day, date.getFullYear()].join(" ");
-}

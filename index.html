@@ -9,7 +9,7 @@
 </head>
 <body>
    <main>
-      <div id="global">
+      <div id="global" class="global">
          <div class="container">
             <div class="header">
                <h3>Global Covid-19 Stats</h3>
@@ -36,25 +36,41 @@
          </div>
       </div>
 
+      <div id="country" class="country">
+         <div class="container">
+            <div class="header">
+               <h3>Country Stats</h3>
+            </div>
+         </div>
+      </div>
+
+      <div id="about" class="about">
+         <div class="container">
+            <div class="header">
+               <h3>About</h3>
+            </div>
+         </div>
+      </div>
 
    </main>
    <nav>
       <div class="container">
-         <div class="box">
-            <i class="fa fa-globe" aria-hidden="true"><a href="#"></a></i>
+         <div class="box" id="box1" onclick="pageSwitcher(1)">
+            <i class="fa fa-globe" aria-hidden="true"></i>
             <p>Global</p>
          </div>
-         <div class="box" id="box2">
-            <i class="fa fa-flag" aria-hidden="true"><a href="#"></a></i>
+         <div class="box" id="box2" onclick="pageSwitcher(2)">
+            <i class="fa fa-flag" aria-hidden="true" ></i>
             <p>Countries</p>
          </div>
-         <div class="box">
-            <i class="fa fa-question-circle" aria-hidden="true"><a href="#"></a></i>
+         <div class="box" id="box3" onclick="pageSwitcher(3)">
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
             <p>About</p>
          </div>
       </div>
    </nav>
 
+   <script src="./assets/js/func.js"></script>
    <script src="./assets/js/index.js"></script>
 </body>
 </html>
