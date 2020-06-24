@@ -8,8 +8,6 @@
    scroll-behavior: smooth;
 }
 
-// 172A45
-
 body {
    background-color: #0A192F;
    color: #CCD6F6;
@@ -33,6 +31,21 @@ main {
                font-size: 20px;
             }
          }
+
+         .data {
+
+            .box {
+               width: 100%;
+               padding: 20px;
+               border-radius: 4px;
+               background-color: #172A45;
+               margin: 12px 0;
+
+               h4 {
+                  margin-bottom: 15px;
+               }
+            }
+         }
       }
    }
 
@@ -45,6 +58,7 @@ nav {
    height: 10vh;
    position: absolute;
    bottom: 0;
+   padding-top: 10px;
 
    .container {
       display: grid;
