@@ -61,3 +61,21 @@ function pageSwitcher(num) {
       about.style.display = 'block'
    }
 }
+
+const input = document.getElementById('input')
+const closeIcon = document.querySelector('.close')
+
+// search close icon
+input.addEventListener('input', () => {
+   if(input.value){
+      closeIcon.style.display = "block"
+   }
+   else {
+      closeIcon.style.display = "none"
+   }
+})
+
+closeIcon.addEventListener('click', () => {
+   input.value = "";
+   closeIcon.style.display = "none"
+})

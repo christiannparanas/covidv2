@@ -20,6 +20,7 @@ main {
 }
 
 main #global .container .header {
+  text-align: center;
   width: 100%;
   height: 60px;
 }
@@ -54,6 +55,7 @@ main #country {
 }
 
 main #country .container .header {
+  text-align: center;
   width: 100%;
   height: 60px;
 }
@@ -62,11 +64,55 @@ main #country .container .header h3 {
   font-size: 20px;
 }
 
+main #country .container .search {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #country .container .search i {
+  padding: 10px 10px;
+}
+
+main #country .container .search .close {
+  display: none;
+  position: absolute;
+  right: 30px;
+}
+
+main #country .container .search input {
+  width: 100%;
+  padding: 5px;
+  background-color: inherit;
+  border: 0;
+  outline: 0;
+  color: #CCD6F6;
+  font-size: 15px;
+}
+
+main #country .container .search input::-webkit-input-placeholder {
+  color: #CCD6F6;
+}
+
+main #country .container .search input:-ms-input-placeholder {
+  color: #CCD6F6;
+}
+
+main #country .container .search input::-ms-input-placeholder {
+  color: #CCD6F6;
+}
+
+main #country .container .search input::placeholder {
+  color: #CCD6F6;
+}
+
 main #about {
   display: none;
 }
 
 main #about .container .header {
+  text-align: center;
   width: 100%;
   height: 60px;
 }
