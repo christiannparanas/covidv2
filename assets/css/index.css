@@ -68,7 +68,6 @@ main #country .container .header {
   position: fixed;
   top: 0;
   padding: 20px 0;
-  text-align: center;
   width: 100%;
   height: 60px;
   z-index: 2;
@@ -159,14 +158,28 @@ main #about {
   display: none;
 }
 
-main #about .container .header {
+main #about .container {
+  padding-top: 100px;
   text-align: center;
-  width: 100%;
-  height: 60px;
 }
 
-main #about .container .header h3 {
+main #about .container .img-container {
+  margin-bottom: 15px;
+}
+
+main #about .container .img-container img {
+  border: 4px solid #5FF2D0;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+}
+
+main #about .container .name-container {
   font-size: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 nav {
