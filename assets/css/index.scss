@@ -57,6 +57,13 @@ main {
                }
             }
 
+            #deaths {
+
+               .value {
+                  color: #F57367;
+               }
+            }
+
             .box:hover {
                border: 2px solid #5FF2D0;
             }
@@ -125,6 +132,10 @@ main {
 
          .countries {
             padding: 120px 0 80px 0;
+
+            .country-deaths {
+               color: #F57367
+            }
 
 
             .container {
