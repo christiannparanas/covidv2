@@ -133,6 +133,7 @@ main #country .container .countries {
 }
 
 main #country .container .countries .container {
+  font-size: 13px;
   margin-bottom: 6px;
   background-color: #172A45;
   padding: 15px;

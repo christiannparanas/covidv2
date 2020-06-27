@@ -6,6 +6,8 @@ const global_recovered = document.querySelector('#recovered .value')
 const global_deaths = document.querySelector('#deaths .value')
 const date = document.querySelector('.date')
 
+const countriesPlace = document.querySelector('.countries')
+
 
 // fetch data
 function Data() {
@@ -23,6 +25,20 @@ function Data() {
    })
    .then( data => {
       console.log(data)
+
+      let keys = Object.keys(data.Countries)
+      
+      keys.forEach( key => {
+         countriesPlace.innerHTML += 
+         `<div class="container">
+            <div class="country-name">${data.Countries[key].Country}</div>
+            <div class="country-cases">Total Cases: ${numberWithCommas(data.Countries[key].TotalConfirmed)}</div>
+            <div class="country-recovered">Recovered: ${numberWithCommas(data.Countries[key].TotalRecovered)}</div>
+            <div class="country-deaths">Deaths: ${numberWithCommas(data.Countries[key].TotalDeaths)}</div>
+         </div>`
+      })
+
+
       globalStats(data)
    })
    .catch(err => {
