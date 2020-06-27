@@ -19,6 +19,10 @@ main {
   padding: 20px;
 }
 
+main #global {
+  margin-bottom: 80px;
+}
+
 main #global .container .header {
   text-align: center;
   width: 100%;
