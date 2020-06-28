@@ -248,8 +248,8 @@ main #country .container .country-modal .container .stats > div {
   margin-bottom: 5px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 200px 100px;
-      grid-template-columns: 200px 100px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
 main #country .container .country-modal .container .btnclose {

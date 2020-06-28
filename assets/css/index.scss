@@ -8,6 +8,10 @@
    scroll-behavior: smooth;
 }
 
+img {
+   pointer-events: none; 
+}
+
 body {
    background-color: #0A192F;
    color: #CCD6F6;
@@ -239,7 +243,7 @@ main {
                .stats > div {
                   margin-bottom: 5px;
                   display: grid;
-                  grid-template-columns: 200px 100px;
+                  grid-template-columns: 1fr 1fr;
                }
 
                .btnclose {
