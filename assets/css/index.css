@@ -185,12 +185,12 @@ main #country .container .countries .container:hover {
 main #country .container .country-modal {
   display: none;
   border-radius: 6px;
-  padding: 20px;
+  padding: 20px 20px 40px 20px;
   position: fixed;
   top: 230px;
-  left: 5%;
-  right: 5%;
-  width: 90%;
+  left: 7%;
+  right: 7%;
+  width: 86%;
   z-index: 10;
   background-color: #0A192F;
 }
@@ -203,22 +203,16 @@ main #country .container .country-modal .container .country-name {
   font-size: 23px;
 }
 
-main #country .container .country-modal .container .country-name p {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
 main #country .container .country-modal .container .country-name img {
-  width: 40px;
+  width: 23px;
   padding: 0;
 }
 
 main #country .container .country-modal .container .date {
   position: absolute;
-  top: 15px;
+  top: 13px;
   right: 0;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 main #country .container .country-modal .container .stats {
@@ -226,20 +220,21 @@ main #country .container .country-modal .container .stats {
   width: 100%;
   display: -ms-grid;
   display: grid;
+  margin-top: 20px;
 }
 
 main #country .container .country-modal .container .stats > div {
   margin-bottom: 5px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 200px 100px;
+      grid-template-columns: 200px 100px;
 }
 
 main #country .container .country-modal .container button {
   margin-top: 20px;
   position: absolute;
-  right: 20px;
+  left: 30vw;
   font-size: 15px;
   background-color: #0A192F;
   border: 2px solid #172A45;

@@ -176,12 +176,12 @@ main {
          .country-modal {
             display: none;
             border-radius: 6px;
-            padding: 20px;
+            padding: 20px 20px 40px 20px;
             position: fixed;
             top: 230px;
-            left: 5%;
-            right: 5%;
-            width: 90%;
+            left: 7%;
+            right: 7%;
+            width: 86%;
             z-index: 10;
             background-color: #0A192F;
    
@@ -191,40 +191,36 @@ main {
                .country-name {
                   font-size: 23px;
 
-                  p {
-                     width: fit-content;
-                     
-                  }
-
                   img {
-                     width: 40px;
+                     width: 23px;
                      padding: 0;
                   }
                }
    
                .date {
                   position: absolute;
-                  top: 15px;
+                  top: 13px;
                   right: 0;
-                  font-size: 12px;
+                  font-size: 10px;
                }
    
                .stats {
                   font-size: 15px;
                   width: 100%;
                   display: grid;
+                  margin-top: 20px;
                }
    
                .stats > div {
                   margin-bottom: 5px;
                   display: grid;
-                  grid-template-columns: 1fr 1fr;
+                  grid-template-columns: 200px 100px;
                }
 
                button {
                   margin-top: 20px;
                   position: absolute;
-                  right: 20px;
+                  left: 30vw;
                   font-size: 15px;
                   background-color: #0A192F;
                   border: 2px solid #172A45;
