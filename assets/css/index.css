@@ -13,6 +13,10 @@ body {
   color: #CCD6F6;
 }
 
+.hide {
+  display: none;
+}
+
 main {
   width: 100%;
   height: 100vh;
