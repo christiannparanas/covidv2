@@ -225,7 +225,7 @@ main #about .container .source .port a {
 main #about .container .source .port a:after {
   content: '';
   display: block;
-  width: 0;
+  width: 0%;
   height: 1px;
   background: #CCD6F6;
   -webkit-transition: width .4s;
