@@ -7,7 +7,6 @@ const global_deaths = document.querySelector('#deaths .value')
 const date = document.querySelector('.date')
 
 const countriesPlace = document.querySelector('.countries')
-
 let bansa = [];
 
 
@@ -36,7 +35,7 @@ function Data() {
          bansa.push(DATA[key].Country)
 
          countriesPlace.innerHTML += 
-         `<div class="container" id="bansa${id}">
+         `<div class="container" id="bansa${id}" onclick="mymodal(2)">
             <div class="country-name">${DATA[key].Country}</div>
             <div class="country-cases">Total Cases: ${numberWithCommas(DATA[key].TotalConfirmed)}</div>
             <div class="country-recovered">Recovered: ${numberWithCommas(DATA[key].TotalRecovered)}</div>
@@ -81,3 +80,17 @@ inpu.addEventListener('input', () => {
       num++;
    })
 })
+
+// modal
+const modal = document.querySelector('.country-modal')
+
+function mymodal(num) {
+   modal.style.display = "none"
+
+   if(num == 1){
+      modal.style.display = "none"
+   }
+   else if(num == 2){
+      modal.style.display = "block"
+   }
+}
