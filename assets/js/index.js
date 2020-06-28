@@ -27,7 +27,6 @@ function Data() {
       }
    })
    .then( data => {
-      console.log(data)
       let id = 0;
 
       let keys = Object.keys(data.Countries)

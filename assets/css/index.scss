@@ -193,6 +193,39 @@ main {
             width: fit-content;
             margin: 0 auto;
          }
+
+         .source {
+            margin-top: 20px;
+
+            .api {
+               font-size: 13px;
+            }
+
+            .port {
+               width: fit-content;
+               margin: 0 auto;
+               margin-top: 8px;
+               
+               a {
+                  font-size: 13px;
+                  text-decoration: none;
+                  color: #CCD6F6;
+               }
+
+               a:after {
+                  content: '';
+                  display: block;
+                  width: 0;
+                  height: 1px;
+                  background: #CCD6F6;
+                  transition: width .4s;
+               }
+
+               a:hover::after {
+                  width: 100%;
+               }
+            }
+         }
       }
    }
 

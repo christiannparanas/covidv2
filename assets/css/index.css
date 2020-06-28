@@ -200,6 +200,42 @@ main #about .container .name-container {
   margin: 0 auto;
 }
 
+main #about .container .source {
+  margin-top: 20px;
+}
+
+main #about .container .source .api {
+  font-size: 13px;
+}
+
+main #about .container .source .port {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 8px;
+}
+
+main #about .container .source .port a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #CCD6F6;
+}
+
+main #about .container .source .port a:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #CCD6F6;
+  -webkit-transition: width .4s;
+  transition: width .4s;
+}
+
+main #about .container .source .port a:hover::after {
+  width: 100%;
+}
+
 nav {
   width: 100%;
   height: 70px;
