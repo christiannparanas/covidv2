@@ -66,6 +66,14 @@ main #global .container .data .box h4 {
   margin-bottom: 15px;
 }
 
+main #global .container .data #cases .value {
+  color: #F6DADA;
+}
+
+main #global .container .data #recovered .value {
+  color: #00F2F8;
+}
+
 main #global .container .data #deaths .value {
   color: #F57367;
 }
@@ -154,6 +162,14 @@ main #country .container .countries {
   z-index: 2;
 }
 
+main #country .container .countries .country-cases {
+  color: #F6DADA;
+}
+
+main #country .container .countries .country-recovered {
+  color: #00F2F8;
+}
+
 main #country .container .countries .country-deaths {
   color: #F57367;
 }
@@ -214,6 +230,18 @@ main #country .container .country-modal .container .stats {
   display: -ms-grid;
   display: grid;
   margin-top: 20px;
+}
+
+main #country .container .country-modal .container .stats .cases {
+  color: #F6DADA;
+}
+
+main #country .container .country-modal .container .stats .recovered {
+  color: #00F2F8;
+}
+
+main #country .container .country-modal .container .stats .deaths {
+  color: #F57367;
 }
 
 main #country .container .country-modal .container .stats > div {

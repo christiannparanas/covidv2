@@ -8,6 +8,8 @@ const date = document.querySelector('.date')
 
 const countriesPlace = document.querySelector('.countries')
 let bansa = [];
+let countryCode = [];
+let DATA;
 
 
 
@@ -29,13 +31,15 @@ function Data() {
       let id = 0;
 
       let keys = Object.keys(data.Countries)
-      let DATA = data.Countries;
+      DATA = data.Countries;
+      let count = 0;
       
       keys.forEach( key => {
          bansa.push(DATA[key].Country)
+         countryCode.push(DATA[key].CountryCode)
 
          countriesPlace.innerHTML += 
-         `<div class="container" id="bansa${id}" onclick="mymodal(2)">
+         `<div class="container" id="bansa${id}" onclick="mymodal(${count})" code="${DATA[key].CountryCode}">
             <div class="country-name">${DATA[key].Country}</div>
             <div class="country-cases">Total Cases: ${numberWithCommas(DATA[key].TotalConfirmed)}</div>
             <div class="country-recovered">Recovered: ${numberWithCommas(DATA[key].TotalRecovered)}</div>
@@ -43,6 +47,7 @@ function Data() {
          </div>`
 
          id++;
+         count++;
       })
 
       globalStats(data)
@@ -81,16 +86,41 @@ inpu.addEventListener('input', () => {
    })
 })
 
+
 // modal
 const modal = document.querySelector('.country-modal')
+const country_name_modal = document.querySelector('.country-name')
+
+const totalCasesModal = document.querySelector('.cases .total')
+const newCasesModal = document.querySelector('.cases .new')
+const totalRecoveredModal = document.querySelector('.recovered .total')
+const newRecoveredModal = document.querySelector('.recovered .new')
+const totalDeathsModal = document.querySelector('.deaths .total')
+const newDeathsModal = document.querySelector('.deaths .new')
+
+function closeModal() {
+   modal.style.display = "none"
+}
 
 function mymodal(num) {
    modal.style.display = "none"
 
-   if(num == 1){
-      modal.style.display = "none"
-   }
-   else if(num == 2){
-      modal.style.display = "block"
-   }
+   const container = document.getElementById(`bansa${num}`)
+
+   countryCode.forEach( code => {
+      if(code == container.getAttribute("code")){
+         modal.style.display = "block"
+         country_name_modal.innerHTML = `${DATA[num].Country} <img src="https://www.countryflags.io/${code}/flat/64.png">`;
+
+         totalCasesModal.innerHTML = `Total Cases: ${numberWithCommas(DATA[num].TotalConfirmed)}`
+         newCasesModal.innerHTML = `New: ${numberWithCommas(DATA[num].NewConfirmed)}`
+
+         totalRecoveredModal.innerHTML = `Recovered: ${numberWithCommas(DATA[num].TotalRecovered)}`
+         newRecoveredModal.innerHTML = `New: ${numberWithCommas(DATA[num].NewRecovered)}`
+         totalDeathsModal.innerHTML = `Deaths: ${numberWithCommas(DATA[num].TotalDeaths)}`
+         newDeathsModal.innerHTML = `New: ${numberWithCommas(DATA[num].NewDeaths)}`
+
+      }
+   })
 }
+

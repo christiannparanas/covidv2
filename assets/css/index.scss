@@ -65,6 +65,18 @@ main {
                }
             }
 
+            #cases {
+               .value {
+                  color: #F6DADA;
+               }
+            }
+
+            #recovered {
+               .value {
+                  color: #00F2F8;
+               }
+            }
+
             #deaths {
 
                .value {
@@ -144,6 +156,14 @@ main {
             padding: 120px 0 80px 0;
             z-index: 2;
 
+            .country-cases {
+               color: #F6DADA;
+            }
+
+            .country-recovered {
+               color: #00F2F8;
+            }
+
             .country-deaths {
                color: #F57367
             }
@@ -202,6 +222,18 @@ main {
                   width: 100%;
                   display: grid;
                   margin-top: 20px;
+
+                  .cases {
+                     color: #F6DADA;
+                  }
+
+                  .recovered {
+                     color: #00F2F8;
+                  }
+
+                  .deaths {
+                     color: #F57367;
+                  }
                }
    
                .stats > div {

@@ -78,4 +78,6 @@ input.addEventListener('input', () => {
 closeIcon.addEventListener('click', () => {
    input.value = "";
    closeIcon.style.display = "none"
+
+   
 })
